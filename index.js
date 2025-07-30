@@ -1,10 +1,13 @@
+require('dotenv').config();
+
+
 const express = require('express');
 const port = 4000;
 const path = require('path');
 
 // require the mongoose file
 const db = require('./config/mongoose');
-const User = require('./models/register');
+const Register = require('./models/register');
 const Login = require('./models/login');
 const Dashboard = require('./models/dashboard');
 
@@ -37,68 +40,68 @@ app.post('/register', (req, res) => {
         email: req.body.email,
         password: req.body.password
     })
-    .then(user => {
-        console.log("Successfully Created user!", user);
-        res.redirect('/dashboard');
-    })
-    .catch(err => {
-        console.log("Error Creating user!!", err);
-        res.status(500).send("Error Creating user!!");
-    });
+        .then(user => {
+            console.log("Successfully Created user!", user);
+            res.redirect('/dashboard');
+        })
+        .catch(err => {
+            console.log("Error Creating user!!", err);
+            res.status(500).send("Error Creating user!!");
+        });
 });
 
 // adding the task to the database
-app.post('/addtask', function(req,res){
+app.post('/addtask', function (req, res) {
     Dashboard.create({
-        task : req.body.task,
-        date : req.body.date,
-        description : req.body.description,
-        time : req.body.time,
-        categoryChoosed : req.body.categoryChoosed
+        task: req.body.task,
+        date: req.body.date,
+        description: req.body.description,
+        time: req.body.time,
+        categoryChoosed: req.body.categoryChoosed
     })
-    .then(newTask => {
-        console.log("Successfully Created Task!", newTask);
-        res.redirect('back');
-    })
-    .catch(err => {
-        console.log("Error Creating Task!!", err);
-        // res.status(500).send("Error Creating Task!!");
-        res.redirect('back');
-    });
+        .then(newTask => {
+            console.log("Successfully Created Task!", newTask);
+            res.redirect('back');
+        })
+        .catch(err => {
+            console.log("Error Creating Task!!", err);
+            // res.status(500).send("Error Creating Task!!");
+            res.redirect('back');
+        });
 });
 
 // complate the task to the database
-app.get('/complete-task', function(req,res){
+app.get('/complete-task', function (req, res) {
     let id = req.query.id;
-    Dashboard.findByIdAndUpdate(id, {completed: true})
-    .then(newTask => {
-        console.log("Successfully Complated Task!", newTask);
-        res.redirect('back');
-    })
-    .catch(err => {
-        console.log("Error Complating Task!!", err);
-        res.redirect('back');
-    });
+    Dashboard.findByIdAndUpdate(id, { completed: true })
+        .then(newTask => {
+            console.log("Successfully Complated Task!", newTask);
+            res.redirect('back');
+        })
+        .catch(err => {
+            console.log("Error Complating Task!!", err);
+            res.redirect('back');
+        });
 });
 
 
 // deleting the task to the database
-app.get('/delete-task', function(req,res){
+app.get('/delete-task', function (req, res) {
     let id = req.query.id;
     Dashboard.findByIdAndDelete(id)
-    .then(newTask => {
-        console.log("Successfully Deleted Task!", newTask);
-        res.redirect('back');
-    })
-    .catch(err => {
-        console.log("Error Deleting Task!!", err);
-        res.redirect('back');
-    });
+        .then(newTask => {
+            console.log("Successfully Deleted Task!", newTask);
+            res.redirect('back');
+        })
+        .catch(err => {
+            console.log("Error Deleting Task!!", err);
+            res.redirect('back');
+        });
 
 });
 
 
-app.listen(port,(err) => {
+app.listen(port, (err) => {
     if (err) {
         console.log(`Error: ${err}`);
     }
