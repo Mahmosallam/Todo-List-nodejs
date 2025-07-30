@@ -97,8 +97,8 @@ resource "aws_route_table_association" "my_subnet_association" {
 
 resource "aws_instance" "my-ec2-apache" {
   count = 3
-  ami   = "ami-0150ccaf51ab55a51" 
-  instance_type = "t2.micro" 
+  ami   = "ami-020cba7c55df1f615" 
+  instance_type = "t3.micro" 
 
   subnet_id              = aws_subnet.public-subnet.id
   vpc_security_group_ids = [aws_security_group.sg-1.id]
@@ -109,9 +109,11 @@ resource "aws_instance" "my-ec2-apache" {
   depends_on = [ aws_s3_bucket.backend-s3 ]
   user_data = <<-EOF
               #!/bin/bash
-              yum update -y
-              yum install -y python3
-            EOF
+              apt update -y
+              apt install -y python3 apache2
+              systemctl start apache2
+              systemctl enable apache2
+              EOF
 
   tags = {
     Name = "My-SERVER-EC2-${count.index + 1}"
