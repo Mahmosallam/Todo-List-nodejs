@@ -1,7 +1,9 @@
 # ☁️ Terraform – EC2 Provisioning on AWS
 
 This folder contains the Terraform configuration files used to provision an AWS EC2 instance to host the Dockerized Todo List App.
+
 ![d66ee784-f56f-4ec3-b3e0-554fb40c6355](https://github.com/user-attachments/assets/1890aad0-420e-4254-84c1-ad7a0b65138a)
+
 ---
 
 ## 📌 What Does This Terraform Code Do?
@@ -134,7 +136,9 @@ export AWS_SECRET_ACCESS_KEY="..."
 ```
 -Always use terraform plan before apply.
 
+
 <img width="496" height="211" alt="Screenshot 2025-07-31 095655" src="https://github.com/user-attachments/assets/f352a25c-1cce-4439-bc98-0e62397dbe7e" />
+
 
 
 <img width="1607" height="291" alt="Screenshot 2025-07-31 014831" src="https://github.com/user-attachments/assets/04e24a0e-282f-4245-a8c0-bb4e83fc42ae" />
