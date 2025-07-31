@@ -111,7 +111,7 @@ You can find the workflow in:
     - Copy .env and docker-compose.yml to the EC2
     - Run Docker Compose to launch the app
 
-  [Go to Ansible documentation →](https://github.com/Mahmosallam/Todo-List-nodejs/edit/master/Ansible/README.md)
+  [Go to Ansible documentation →](https://github.com/Mahmosallam/Todo-List-nodejs/tree/master/Ansible)
 
 ----------------------------------------------------------------------
 ---
