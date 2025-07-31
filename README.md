@@ -1,5 +1,6 @@
 
 📌 DevOps Project – Todo List App Deployment
+
 👋 Introduction
 This project is part of a DevOps assessment. The goal is to containerize a Node.js TODO application, automate its deployment using CI/CD tools, and run it on an AWS EC2 instance with monitoring and auto-update features.
 I have completed Parts 1 to 3 of the task (excluding the optional Kubernetes part), and this README documents the full process.
