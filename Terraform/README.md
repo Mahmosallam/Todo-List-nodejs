@@ -136,9 +136,12 @@ export AWS_SECRET_ACCESS_KEY="..."
 ```
 -Always use terraform plan before apply.
 
+we can see the pub ip :
 
 <img width="496" height="211" alt="Screenshot 2025-07-31 095655" src="https://github.com/user-attachments/assets/f352a25c-1cce-4439-bc98-0e62397dbe7e" />
 
+
+and we can see the ec2 :
 
 
 <img width="1607" height="291" alt="Screenshot 2025-07-31 014831" src="https://github.com/user-attachments/assets/04e24a0e-282f-4245-a8c0-bb4e83fc42ae" />
