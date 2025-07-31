@@ -141,13 +141,17 @@ we can see the pub ip :
 <img width="496" height="211" alt="Screenshot 2025-07-31 095655" src="https://github.com/user-attachments/assets/f352a25c-1cce-4439-bc98-0e62397dbe7e" />
 
 
+
 and we can see the ec2 :
 
 
 <img width="1607" height="291" alt="Screenshot 2025-07-31 014831" src="https://github.com/user-attachments/assets/04e24a0e-282f-4245-a8c0-bb4e83fc42ae" />
 
 
+ans we can see when write ip:
 
+
+<img width="1560" height="824" alt="Screenshot 2025-07-31 041257" src="https://github.com/user-attachments/assets/e72aa96c-435b-4771-9fd7-4929479578b7" />
 
 
 
