@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  todo-app:
+    image: osos3/todo-list-nodejs:latest
+    container_name: todo-list
+    ports:
+      - "4000:4000"
+    env_file:
+      - .env
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4000"]
+      interval: 30s
+      timeout: 10s
+      retries: 5

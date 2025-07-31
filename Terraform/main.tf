@@ -56,6 +56,15 @@ resource "aws_security_group" "sg-1" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  ingress {
+  description = "Allow HTTP traffic for todo app on port 4000"
+  from_port   = 4000
+  to_port     = 4000
+  protocol    = "tcp"
+  cidr_blocks = ["0.0.0.0/0"]
+}
+
+
   tags = {
     Name = "SG-1"
   }

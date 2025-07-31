@@ -1,0 +1,36 @@
+---
+- name: Deploy Docker Compose App to EC2
+  hosts: webservers2
+  become: true
+
+  tasks:
+    - name: Create app directory on EC2
+      file:
+        path: /home/ubuntu/todo-app/
+        state: directory
+        owner: ubuntu
+        group: ubuntu
+        mode: '0755'
+
+    - name: Copy .env file to EC2
+      copy:
+        src: /home/sallam/todo-app/Todo-List-nodejs/.env
+        dest: /home/ubuntu/todo-app/.env
+        owner: ubuntu
+        group: ubuntu
+        mode: '0644'
+
+    - name: Copy docker-compose.yml to EC2
+      copy:
+        src: /home/sallam/todo-app/Todo-List-nodejs/docker-compose.yml
+        dest: /home/ubuntu/todo-app/docker-compose.yml
+        owner: ubuntu
+        group: ubuntu
+        mode: '0644'
+
+    - name: Run docker compose up
+      become: false
+      ansible.builtin.shell: |
+        docker compose -f docker-compose.yml up -d
+      args:
+        chdir: /home/ubuntu/todo-app/
