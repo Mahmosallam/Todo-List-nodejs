@@ -5,6 +5,11 @@
 This project is part of a DevOps assessment. The goal is to containerize a Node.js TODO application, automate its deployment using CI/CD tools, and run it on an AWS EC2 instance with monitoring and auto-update features.
 I have completed Parts 1 to 3 of the task (excluding the optional Kubernetes part), and this README documents the full process.
 
+
+![chrome_VMgyYeQr3l](https://github.com/user-attachments/assets/94cc91b4-6bd5-4189-a105-c9e1cf79dea9)
+
+
+
 ---------------------------------------------------
 🛠️ Tech Stack
 - Node.js – Todo list application
