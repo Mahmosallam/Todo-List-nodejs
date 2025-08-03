@@ -7,7 +7,7 @@ This directory contains Ansible configurations to automate:
 
 ---
 
-## 🚨 Before You Start – Important Notes
+## 🚨 Before You Start – Important Notes :
 
 Before running any Ansible playbooks, make sure you have the following setup:
 
