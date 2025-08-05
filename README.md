@@ -42,8 +42,6 @@ cd Todo-List-nodejs
 ```bash
 mongoDbUrl=mongodb+srv://<username>:<password>@cluster0.abcde.mongodb.net/
 ```
-<img width="812" height="61" alt="Screenshot 2025-07-30 055001" src="https://github.com/user-attachments/assets/3d4d14e7-11bf-4651-99b3-b0dcc304426e" />
-
 
 <img width="1606" height="246" alt="image" src="https://github.com/user-attachments/assets/4fc898ac-3464-4a38-99c3-79b73bd5e3de" />
 
